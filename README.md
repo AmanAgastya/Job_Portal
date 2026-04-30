@@ -217,79 +217,6 @@ Unauthenticated candidate pages redirect to `/candidate-login`. Employer-only pa
 
 ---
 
-## API Endpoints
-
-### Auth
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| POST | `/api/auth/register` | Register a candidate or recruiter |
-| POST | `/api/auth/login` | Login and receive JWT |
-| GET | `/api/auth/me` | Get current authenticated user |
-| POST | `/api/auth/seed-admin` | Create default admin account |
-
-### Jobs
-
-| Method | Endpoint | Auth | Description |
-| --- | --- | --- | --- |
-| GET | `/api/jobs` | Public | List and search jobs |
-| GET | `/api/jobs/:id` | Public | Get job details |
-| POST | `/api/jobs` | Recruiter | Create a job |
-| PUT | `/api/jobs/:id` | Recruiter | Update a job |
-| DELETE | `/api/jobs/:id` | Recruiter | Delete a job |
-| GET | `/api/jobs/employer/myjobs` | Recruiter | Get recruiter's jobs |
-
-### Applications
-
-| Method | Endpoint | Auth | Description |
-| --- | --- | --- | --- |
-| POST | `/api/applications` | Candidate | Apply to a job |
-| GET | `/api/applications/my` | Candidate | Get candidate applications |
-| GET | `/api/applications/employer` | Recruiter | Get employer applications |
-| PUT | `/api/applications/:id/status` | Recruiter | Update application status |
-
-### Users
-
-| Method | Endpoint | Auth | Description |
-| --- | --- | --- | --- |
-| PUT | `/api/users/profile` | User | Update profile |
-| POST | `/api/users/upload-resume` | User | Upload resume |
-| GET | `/api/users/saved-jobs` | User | Get saved jobs |
-| POST | `/api/users/save-job/:jobId` | User | Toggle saved job |
-| GET | `/api/users/dashboard-stats` | User | Get dashboard statistics |
-
-### Resume / ATS
-
-| Method | Endpoint | Auth | Description |
-| --- | --- | --- | --- |
-| POST | `/api/resume/analyze` | User | Analyze resume |
-
-### Admin
-
-| Method | Endpoint | Auth | Description |
-| --- | --- | --- | --- |
-| GET | `/api/admin/stats` | Admin | Platform stats |
-| GET | `/api/admin/users` | Admin | List users |
-| PUT | `/api/admin/users/:id/status` | Admin | Toggle user status |
-| DELETE | `/api/admin/users/:id` | Admin | Delete user |
-| GET | `/api/admin/jobs` | Admin | List all jobs |
-| PUT | `/api/admin/jobs/:id/status` | Admin | Toggle job status |
-| DELETE | `/api/admin/jobs/:id` | Admin | Delete job |
-
----
-
-## Dashboards
-
-| Role | Route | Main Sections |
-| --- | --- | --- |
-| Candidate | `/candidate` | Overview, applications, saved jobs, resume, profile, ATS |
-| Employer | `/employer` | Overview, my jobs, applications, company profile |
-| Admin | `/admin` | Overview, users, jobs, applications |
-
-`/dashboard` automatically redirects each authenticated user to the correct dashboard based on role.
-
----
-
 ## ATS Resume Checker
 
 The ATS checker analyzes uploaded resumes and returns:
@@ -333,22 +260,6 @@ From `backend/`:
 | --- | --- |
 | `npm run dev` | Start backend with nodemon |
 | `npm start` | Start backend with node |
-
----
-
-## Notes
-
-- The frontend Axios instance is configured in `frontend/src/utils/api.js`.
-- The backend serves uploaded files from `/uploads`.
-- React uses the backend proxy defined in `frontend/package.json`.
-- Protected routes are handled by `frontend/src/components/layout/ProtectedRoute.js`.
-- Shared auth form layout lives in `frontend/src/components/auth/AuthLayout.js`.
-
----
-
-## License
-
-MIT License. Free to use for educational and learning purposes.
 
 ---
 
