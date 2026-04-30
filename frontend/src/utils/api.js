@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://job-portal-backend-o3d5.onrender.com',
+  baseURL: process.env.REACT_APP_API_URL + "/api" || 'https://job-portal-backend-o3d5.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
