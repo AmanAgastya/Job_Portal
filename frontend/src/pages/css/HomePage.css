@@ -1,0 +1,212 @@
+.home-stats-bar {
+  background: var(--dark-2);
+  padding: 28px 0;
+}
+
+.home-stats-inner {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.home-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+}
+
+.home-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-stat-value {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.home-stat-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.home-categories-section {
+  padding: 72px 0;
+  background: white;
+}
+
+.home-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.home-section-title {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.home-section-subtitle {
+  color: var(--gray);
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.home-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.home-category-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: white;
+  transition: var(--transition);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.home-category-card:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.home-category-icon {
+  font-size: 28px;
+}
+
+.home-category-label {
+  font-size: 14px;
+}
+
+.home-category-count {
+  font-size: 12px;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+.home-featured-section {
+  padding: 72px 0;
+}
+
+.home-features-section {
+  padding: 72px 0;
+  background: white;
+}
+
+.home-features-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.home-feature-card {
+  text-align: center;
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.home-feature-icon {
+  font-size: 44px;
+  margin-bottom: 16px;
+}
+
+.home-feature-title {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.home-feature-desc {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.home-cta-section {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.home-cta-title {
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.home-cta-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 36px;
+}
+
+.home-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-cta-btn-primary {
+  background: white;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.home-cta-btn-outline {
+  border-color: white;
+  color: white;
+}
+
+/* Job card in home */
+.job-card-wrapper {
+  cursor: pointer;
+}
+
+/* Search bar */
+.home-search-popular {
+  margin-top: 16px;
+  opacity: 0.7;
+  font-size: 13px;
+}
+
+.home-search-tag {
+  color: #fbbf24;
+}
+
+.home-404 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-404-emoji {
+  font-size: 80px;
+}
+
+.home-404-title {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.home-404-text {
+  color: var(--gray);
+}

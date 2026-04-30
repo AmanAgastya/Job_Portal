@@ -1,0 +1,21 @@
+.protected-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.protected-loading-inner {
+  text-align: center;
+}
+
+.protected-loading-spinner {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+  margin: 0 auto 16px;
+}
+
+.protected-loading-text {
+  color: var(--gray);
+}
