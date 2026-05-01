@@ -277,7 +277,7 @@ export default function CandidateDashboard() {
                           Uploaded {new Date(user.profile.resume.uploadedAt).toLocaleDateString('en-IN')}
                         </div>
                       </div>
-                      <a href={`http://localhost:5000${user.profile.resume.url}`} target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">
+                      <a href={`${process.env.REACT_APP_API_URL}${user.profile.resume.url}`} target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">
                         <FiEye /> View
                       </a>
                     </div>
