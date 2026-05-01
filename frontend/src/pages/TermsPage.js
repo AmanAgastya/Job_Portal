@@ -31,7 +31,7 @@ export default function TermsPage() {
           <aside className="terms-toc">
             <div className="terms-toc-title">Contents</div>
             {SECTIONS.map(s => (
-              <a key={s.id} href={`#${s.id}`} className="terms-toc-link">{s.title}</a>
+              <a key={s.id} className="terms-toc-link">{s.title}</a>
             ))}
           </aside>
 
