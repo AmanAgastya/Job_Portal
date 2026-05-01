@@ -27,10 +27,12 @@ export default function PrivacyPage() {
       <div className="container">
         <div className="policy-layout">
           {/* TOC */}
-          <aside className="policy-toc">
-            <div className="policy-toc-title">Contents</div>
+          <aside className="policy-toc" aria-labelledby="privacy-contents-title">
+            <div id="privacy-contents-title" className="policy-toc-title">Contents</div>
             {SECTIONS.map(s => (
-              <a key={s.id} href={`#${s.id}`} className="policy-toc-link">{s.title}</a>
+              <a key={s.id} href={`#${s.id}`} className="policy-toc-link">
+                {s.title}
+              </a>
             ))}
           </aside>
 

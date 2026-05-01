@@ -27,9 +27,37 @@
 @media (max-width: 768px) {
   .policy-layout {
     grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px 0;
   }
+
   .policy-toc {
+    position: static;
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .policy-toc::-webkit-scrollbar {
     display: none;
+  }
+
+  .policy-toc-title {
+    flex: 0 0 auto;
+    margin: 0 6px 0 0;
+    align-self: center;
+  }
+
+  .policy-toc-link {
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: white;
+    font-size: 13px;
   }
 }
 
