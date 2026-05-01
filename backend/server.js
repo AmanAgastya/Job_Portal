@@ -15,6 +15,7 @@ const app = express();
 const allowedOrigins = [
   process.env.FRONTEND_URL,
   'https://job-portal-aman.vercel.app',
+  'http://job-portal-aman.vercel.app',
   'http://localhost:3000',
 ].filter(Boolean);
 
