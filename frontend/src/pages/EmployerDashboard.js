@@ -423,7 +423,7 @@ export default function EmployerDashboard() {
                             {['pending', 'viewed', 'shortlisted', 'interview', 'offer', 'rejected'].map(s => <option key={s} value={s}>{s.charAt(0).toUpperCase() + s.slice(1)}</option>)}
                           </select>
                           {app.resumeUrl && (
-                            <a href={`http://localhost:5000${app.resumeUrl}`} target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">📄 Resume</a>
+                            <a href={`${process.env.REACT_APP_API_URL}${user.profile.resume.url}`} target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">📄 Resume</a>
                           )}
                         </div>
                       </div>
