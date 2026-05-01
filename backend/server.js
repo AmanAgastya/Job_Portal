@@ -4,22 +4,33 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
+const authRoutes = require('./routes/auth');
+const jobsRoutes = require('./routes/jobs');
+const applicationsRoutes = require('./routes/applications');
+const usersRoutes = require('./routes/users');
+const adminRoutes = require('./routes/admin');
+const resumeRoutes = require('./routes/resume');
+
 const app = express();
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'https://job-portal-aman.vercel.app',
+  'http://localhost:3000',
+].filter(Boolean);
 
 // Middleware
-app.use(cors({ origin: process.env.FRONTEND_URL ||  'http://job-portal-aman.vercel.app' || 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
-app.use("/api", require("./routes/..."));
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/jobs', require('./routes/jobs'));
-app.use('/api/applications', require('./routes/applications'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/admin', require('./routes/admin'));
-app.use('/api/resume', require('./routes/resume'));
+app.use('/api/auth', authRoutes);
+app.use('/api/jobs', jobsRoutes);
+app.use('/api/applications', applicationsRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/resume', resumeRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'OK', message: 'Job Quest API Running' }));
