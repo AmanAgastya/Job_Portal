@@ -1,56 +1,70 @@
+.site-footer {
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.72);
+  padding: 30px 0 16px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(130px, 1fr));
+  align-items: start;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.footer-brand {
+  max-width: 320px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 800;
+  font-size: 21px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
 .footer-logo-img {
-  width: 120px;
-  height: 110px;
+  width: 48px;
+  height: 46px;
   border-radius: 8px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
-.site-footer {
-  background: var(--dark);
-  color: rgba(255,255,255,.7);
-  padding: 48px 0 24px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-.footer-brand {
-  max-width: 300px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-weight: 800;
-  font-size: 22px;
-  margin-bottom: 12px;
-  text-decoration: none;
-}
-
 .footer-brand-desc {
-  font-size: 14px;
-  line-height: 1.7;
+  max-width: 300px;
+  font-size: 13px;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.footer-logo2-text {
+  display: inline-flex;
+  padding: 3px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .footer-col-title {
   color: white;
-  margin-bottom: 14px;
-  font-size: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .footer-link {
   display: block;
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: rgba(255,255,255,.7);
+  width: fit-content;
+  font-size: 13px;
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -60,8 +74,125 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.1);
-  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 14px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .site-footer {
+    padding: 24px 0 14px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+
+  .footer-brand-desc {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 18px 0 12px;
+  }
+
+  .site-footer .container {
+    padding: 0 12px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .footer-brand {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  .footer-logo-img {
+    width: 36px;
+    height: 34px;
+    border-radius: 7px;
+  }
+
+  .footer-brand-desc {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 0;
+  }
+
+  .footer-logo2-text {
+    justify-self: end;
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  .footer-inner > div:not(.footer-brand) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 6px 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-col-title {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+
+  .footer-link {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 6px 8px;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    padding-top: 10px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer-brand {
+    grid-template-columns: 1fr auto;
+  }
+
+  .footer-logo {
+    font-size: 17px;
+  }
+
+  .footer-inner > div:not(.footer-brand) {
+    grid-template-columns: 1fr;
+  }
 }
