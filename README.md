@@ -8,7 +8,12 @@ Team: Aman Agastya, Bikash Lal Shaw, Rampratap Chauhan
 Guide: Md Ashraf Ali, Subject Matter Expert (MERN), Ardent Computech Pvt Ltd
 
 ---
+## Deployment
+The code for Project is Deployment Ready and Deployed on Vercel(Frontend) and Render(Backend). It also run on local server smoothly without any changes.
 
+Frontend_URL : https://job-portal-sigma-kohl.vercel.app
+
+---
 ## Features
 
 ### Candidates
