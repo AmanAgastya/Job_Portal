@@ -4,7 +4,7 @@ Job Quest is a full-stack job portal built with the MERN stack: MongoDB, Express
 
 Developed as a Internship project at Ardent Computech Pvt Ltd, Kolkata.
 
-Team: Aman Agastya, Bikash Lal Shaw, Rampratap Chauhan
+Contributer: Aman Agaatya
 Guide: Md Ashraf Ali, Subject Matter Expert (MERN), Ardent Computech Pvt Ltd
 
 ---
