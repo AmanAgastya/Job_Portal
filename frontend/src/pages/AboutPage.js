@@ -23,21 +23,11 @@ const TEAM = [
   {
     id: 2,
     name: 'Bikash Lal Shaw',
-    role: 'Backend Developer',
+    role: 'Frontend Developer',
     img: '/Bikash1.jpeg',
     location: 'Kolkata',
     rate: 5,
     bio: 'Backend specialist building secure, scalable APIs and database systems.',
-    social: { facebook: '#', twitter: '#', instagram: '#', linkedin: '#' },
-  },
-  {
-    id: 3,
-    name: 'Rampratap Chauhan',
-    role: 'Frontend Developer',
-    img: '/Ram.jpeg',
-    location: 'Kolkata',
-    rate: 5,
-    bio: 'Frontend wizard crafting pixel-perfect, responsive React applications.',
     social: { facebook: '#', twitter: '#', instagram: '#', linkedin: '#' },
   },
 ];
