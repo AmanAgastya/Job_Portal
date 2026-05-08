@@ -17,10 +17,6 @@ const TEAM = [
     img: '/Bikash1.jpeg',
     location: 'Kolkata', rate: 5,
     social: { facebook: '#', twitter: '#', instagram: '#', linkedin: '#' } },
-  { id: 3, name: 'Rampratap Chauhan', role: 'Frontend Developer',
-   img: '/Ram.jpeg',
-    location: 'Kolkata', rate: 5,
-    social: { facebook: '#', twitter: '#', instagram: '#', linkedin: '#' } },
 ];
 
 function StarRating({ rating, max = 5 }) {
